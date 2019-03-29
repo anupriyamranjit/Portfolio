@@ -23,6 +23,12 @@ tweets = browser.find_elements_by_class_name('tweet-text')
 source = browser.page_source
 soup = bs.BeautifulSoup(source,'lxml')
 
+def get_handle(BSobject):
+    for handle in BSobject.find_all('a', class_='ProfileHeaderCard-screennameLink u-linkComplex js-nav'):
+        for at in handle.find_all('b', class_='u-linkComplex-target'):
+            print(at.text)
+    return(at.text)
+
 f= open("ObamaTwitter.txt","w+")
 for m in tweets:
  print(m.text)
@@ -34,8 +40,3 @@ f.write("Tweeted by:"get_handle(soup))
 f.close()
 
 
-def get_handle(BSobject):
-    for handle in BSobject.find_all('a', class_='ProfileHeaderCard-screennameLink u-linkComplex js-nav'):
-        for at in handle.find_all('b', class_='u-linkComplex-target'):
-            print(at.text)
-    return(at.text)
