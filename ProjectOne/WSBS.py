@@ -33,6 +33,8 @@ def get_handle(BSobject):
 
 
 obamatweet = []
+for m in tweets:
+    obamatweet.append(m.text)
 data_transposed = zip(obamatweet)
 df = pd.DataFrame(data_transposed, columns=["Tweet"])
 print(df.head())
