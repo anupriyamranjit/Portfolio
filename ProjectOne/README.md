@@ -1,1 +1,1 @@
-Looking at tweets and predicting a new tweet
+Scraping Twitter and exporting to csv file
