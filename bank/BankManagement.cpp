@@ -14,7 +14,7 @@ public:
     else{
       cout << "You are in the savings account"<< endl;
     }
-    cout << "What would you like to do next"<<endl;
+    cout << "What would you like to do" << endl;
 
   }
   ~User(){

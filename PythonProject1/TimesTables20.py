@@ -2,7 +2,7 @@ from random import randint
 import time
 score = 0
 averagetime = []
-while 1>0:
+while True:
     term1 = randint(1,20)
     term2 = randint(1,20)
     product = term1*term2
